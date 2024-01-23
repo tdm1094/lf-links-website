@@ -5,8 +5,6 @@ async function copyText(e) {
     const link = this.parentElement.getAttribute("href");
     try {
         await navigator.clipboard.writeText(link);
-        e.classList.add("clicked");
-        setTimeout(() => e.classList.remove("clicked"), 300);
     } catch (err) {
         console.error(err);
     }
@@ -15,3 +13,24 @@ async function copyText(e) {
 shareButtons.forEach((shareButton) =>
     shareButton.addEventListener("click", copyText),
 );
+
+function toggleDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myInput").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
