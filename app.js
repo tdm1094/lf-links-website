@@ -24,6 +24,14 @@ function toggleDropdown() {
     });
 }
 
+document.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("dropdown-whatsapp-content show") && !e.target.classList.contains("dropbtn") && !e.target.classList.contains("dropdown-whatsapp")) {
+    dropdownWhatsapp.forEach(e => {
+       e.classList.remove("show");
+    });
+  }
+});
+
 function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
