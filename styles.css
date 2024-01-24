@@ -21,6 +21,10 @@ a {
     color: rgb(240, 240, 240);
 }
 
+footer {
+    margin-top: 10%;
+}
+
 .container {
     width: 91%;
     max-width: 680px;
@@ -28,6 +32,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10%;
 }
 
 .tile {
