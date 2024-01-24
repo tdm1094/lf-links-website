@@ -115,7 +115,7 @@ footer {
     margin-top: 12px;
 }
 
-#grupos-whatsapp-dropdown {
+#dropdown-whatsapp {
     display: block;
     background-color: rgb(7, 94, 84);
     margin-bottom: 16px;
@@ -138,7 +138,6 @@ footer {
 }
 
 #myInput {
-    display: none;
     font-size: 16px;
     padding: 14px 20px 12px 45px;
     box-sizing: border-box;
@@ -152,7 +151,6 @@ footer {
 }
 
 .dropdown-content {
-    display: none;
     position: relative;
     background-color: #f6f6f6;
     border: 1px solid #ddd;
@@ -172,6 +170,10 @@ footer {
 
 .dropdown-content a:hover {
     background-color: #25d366;
+}
+
+.dropdown-whatsapp-content {
+    display: none;
 }
 
 .show {

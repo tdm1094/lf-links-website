@@ -1,3 +1,4 @@
+//Copiar enlace
 const shareButtons = document.querySelectorAll(".tile-share-button");
 
 async function copyText(e) {
@@ -14,9 +15,13 @@ shareButtons.forEach((shareButton) =>
     shareButton.addEventListener("click", copyText),
 );
 
+//Dropdown Whatsapp
+
+const dropdownWhatsapp = Array.from(document.getElementsByClassName("dropdown-whatsapp-content"));
 function toggleDropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-    document.getElementById("myInput").classList.toggle("show");
+    dropdownWhatsapp.forEach(e => {
+       e.classList.toggle("show"); 
+    });
 }
 
 function filterFunction() {
