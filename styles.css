@@ -136,9 +136,10 @@ a {
     display: none;
     font-size: 16px;
     padding: 14px 20px 12px 45px;
+    box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #ddd;
-    width: 89%;
+    width: inherit;
 }
 
 #myInput:focus {
