@@ -27,11 +27,15 @@ function toggleDropdown() {
 }
 
 document.addEventListener("click", (e) => {
-  if (!e.target.classList.contains("dropdown-whatsapp-content show") && !e.target.classList.contains("dropbtn") && !e.target.classList.contains("dropdown-whatsapp")) {
-    dropdownWhatsapp.forEach(e => {
-       e.classList.remove("show");
-    });
-  }
+    if (
+        !e.target.classList.contains("dropdown-whatsapp-content") &&
+        !e.target.classList.contains("dropbtn") &&
+        !e.target.classList.contains("dropdown-whatsapp")
+    ) {
+        dropdownWhatsapp.forEach((e) => {
+            e.classList.remove("show");
+        });
+    }
 });
 
 function filterFunction() {
