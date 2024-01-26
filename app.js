@@ -17,10 +17,12 @@ shareButtons.forEach((shareButton) =>
 
 //Dropdown Whatsapp
 
-const dropdownWhatsapp = Array.from(document.getElementsByClassName("dropdown-whatsapp-content"));
+const dropdownWhatsapp = Array.from(
+    document.getElementsByClassName("dropdown-whatsapp-content"),
+);
 function toggleDropdown() {
-    dropdownWhatsapp.forEach(e => {
-       e.classList.toggle("show"); 
+    dropdownWhatsapp.forEach((e) => {
+        e.classList.toggle("show");
     });
 }
 
