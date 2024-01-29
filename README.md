@@ -11,7 +11,7 @@ La idea de esta página es copiar el estilo de sitios como Linktree y Campsite, 
 
 ### v0.2
 
-- [ ] Implementar desplegables para facilitar la navegación en los grupos de WPP. (También se puede modificar por otra estructura que simplifique su búsqueda).
+- [x] Implementar desplegables para facilitar la navegación en los grupos de WPP. (También se puede modificar por otra estructura que simplifique su búsqueda).
 - [ ] Implementar secciones de enlaces de La Fuente y enlaces de la facultad.
 
 ### v0.3
