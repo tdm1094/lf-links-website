@@ -17,11 +17,11 @@ shareButtons.forEach((shareButton) =>
 
 //Dropdown Whatsapp
 
-const dropdownWhatsapp = Array.from(
+const dropdownWhatsappContent = Array.from(
     document.getElementsByClassName("dropdown-whatsapp-content"),
 );
 function toggleDropdown() {
-    dropdownWhatsapp.forEach((e) => {
+    dropdownWhatsappContent.forEach((e) => {
         e.classList.toggle("show");
     });
 }
@@ -32,7 +32,7 @@ document.addEventListener("click", (e) => {
         !e.target.classList.contains("dropbtn") &&
         !e.target.classList.contains("dropdown-whatsapp")
     ) {
-        dropdownWhatsapp.forEach((e) => {
+        dropdownWhatsappContent.forEach((e) => {
             e.classList.remove("show");
         });
     }
