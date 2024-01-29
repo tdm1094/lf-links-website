@@ -11,8 +11,8 @@ body {
 }
 
 h1 {
-    font-size: 25px;
-    margin-bottom: 15px;
+    font-size: 1.7em;
+    margin: 0;
 }
 
 a {
@@ -20,66 +20,23 @@ a {
     color: rgb(240, 240, 240);
 }
 
-footer {
-    margin-top: 10%;
-}
-
 .container {
-    width: 91%;
-    max-width: 680px;
-    margin: 10px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 680px;
+    width: 91%;
 }
 
-.tile {
-    width: 100%;
-    margin: 7px;
-    background-color: rgb(37, 37, 37);
-    border-radius: 17px;
-    display: flex;
-    justify-content: space-between;
-    font-family: Ubuntu, sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-shadow: 0.3px 0.3px #fff;
+#image-container {
+    height: 11vw;
+    width: 11vw;
+    margin-bottom: 2vh;
 }
 
-.tile:hover {
-    transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
-    transform: scale(1.02);
-}
-
-.tile-share-button {
-    width: 40px;
-    height: 40px;
-    margin: 8px;
-    border-radius: 20px;
-    background-color: rgb(52, 52, 52);
-}
-
-.tile-share-button:active {
-    transform: scale(0.98);
-    /* Scaling button to 0.98 to its original size */
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-    background-color: rgb(87, 87, 87);
-}
-
-.tile-share-button svg {
-    margin-left: 2px;
-    margin-top: 8px;
-    color: rgb(0, 0, 0);
-}
-
-.image-container {
-    height: 126px;
-    width: 126px;
-    /* overflow: hidden; */
-}
-
-.image-container img {
+#image-container img {
     height: 100%;
     width: 100%;
     border-style: solid;
@@ -90,34 +47,73 @@ footer {
 
 #redes-container {
     font-size: 2.5em;
-    padding: 6.8px 6.8px 6.8px 6.8px;
+    margin: 1vh;
 }
 
 #redes-container i {
+    padding: 0 0.4vw;
     color: rgb(37, 37, 37);
 }
 
-.versiones-container {
-    height: inherit;
-    width: inherit;
-    max-width: inherit;
-    text-align: center;
+.tile {
+    background-color: rgb(37, 37, 37);
+    border-radius: 17px;
+    display: flex;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 700;
+    justify-content: space-between;
+    margin: 1vh;
+    text-shadow: 0.3px 0.3px #fff;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.tile:hover {
+    transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+    transform: scale(1.02);
 }
 
 .icon {
-    margin: 4px 8px;
-    width: 44px;
-    height: 44px;
+    width: 6vh;
+    height: 6vh;
+    margin: 1vh;
+    position: relative;
 }
 
 .icon svg {
-    margin-top: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+}
+
+.tile-share-button {
+    width: 6vh;
+    height: 6vh;
+    margin: 1vh;
+    border-radius: 20px;
+    background-color: rgb(52, 52, 52);
+    position: relative;
+}
+
+.tile-share-button:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    background-color: rgb(87, 87, 87);
+}
+
+.tile-share-button svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
 }
 
 #dropdown-whatsapp {
     display: block;
     background-color: rgb(7, 94, 84);
-    margin-bottom: 16px;
 }
 
 .dropbtn {
@@ -156,6 +152,7 @@ footer {
     border-radius: 0 0 17px 17px;
     /* overflow: hidden; */
     max-height: 265px;
+    margin-bottom: 2vh;
     overflow-y:auto;
     z-index: 1;
 }
