@@ -11,38 +11,64 @@ async function copyText(e) {
     }
 }
 
-shareButtons.forEach((shareButton) =>
-    shareButton.addEventListener("click", copyText),
-);
+shareButtons.forEach((shareButton) => 
+    shareButton.addEventListener("click", copyText));
 
 //Dropdown Whatsapp
+const dropdowns = document.querySelectorAll(".dropdown");
 
-const dropdownWhatsappContent = Array.from(
-    document.getElementsByClassName("dropdown-whatsapp-content"),
-);
-function toggleDropdown() {
-    dropdownWhatsappContent.forEach((e) => {
-        e.classList.toggle("show");
-    });
+dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", () => toggleDropdown(dropdown));
+
+    const children = Array.from(dropdown.children);
+    const contenido = children.find((e) =>
+        e.classList.contains("dropdown-contenido"),
+    );
+    contenido.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+});
+
+function toggleDropdown(dropdown) {
+    const contenido = encontrarContenidoDelDropdown(dropdown);
+    if (contenido) {
+        contenido.classList.toggle("show");
+    } else {
+        console.error("No se encontró el contenido del dropdown");
+    }
+}
+
+function hideDropdown(dropdown) {
+    const contenido = encontrarContenidoDelDropdown(dropdown);
+    if (contenido) {
+        contenido.classList.remove("show");
+    } else {
+        console.error("No se encontró el contenido del dropdown");
+    }
+}
+
+function encontrarContenidoDelDropdown(dropdown) {
+    const children = Array.from(dropdown.children);
+    return children.find((e) => e.classList.contains("dropdown-contenido"));
 }
 
 document.addEventListener("click", (e) => {
-    if (
-        !e.target.classList.contains("dropdown-whatsapp-content") &&
-        !e.target.classList.contains("dropbtn") &&
-        !e.target.classList.contains("dropdown-whatsapp")
-    ) {
-        dropdownWhatsappContent.forEach((e) => {
-            e.classList.remove("show");
-        });
-    }
+    const isDropdown = e.target.closest(".dropdown");
+
+    dropdowns.forEach((dropdown) => {
+        const isClickedInsideDropdown = dropdown.contains(e.target);
+
+        if (!isDropdown || !isClickedInsideDropdown) {
+            hideDropdown(dropdown);
+        }
+    });
 });
 
 function filterFunction() {
     var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
+    input = document.getElementById("dropdown-whatsapp-buscador");
     filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
+    div = document.getElementById("dropdown-whatsapp-enlaces");
     a = div.getElementsByTagName("a");
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
