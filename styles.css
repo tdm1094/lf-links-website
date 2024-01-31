@@ -1,6 +1,8 @@
 body {
     align-items: center;
     background-image: url("./images/fondo.webp");
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: rgb(240, 240, 240);
@@ -58,6 +60,11 @@ a {
     color: rgb(37, 37, 37);
 }
 
+#redes-container i:hover {
+    transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+    transform: scale(1.09);
+}
+
 #enlaces-container {
     font-size: 1rem;
     text-align: center;
@@ -68,13 +75,18 @@ a {
     background-color: rgb(37, 37, 37);
     border-radius: 17px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-family: Ubuntu, sans-serif;
     font-weight: 700;
-    justify-content: space-between;
     margin: 7px;
     text-shadow: 0.3px 0.3px #fff;
     text-transform: uppercase;
     width: 100%;
+}
+
+.tile > :only-child {
+    flex-grow: 1;
 }
 
 .tile:hover {
@@ -126,10 +138,27 @@ a {
 
 .dropdown p {
     padding: 15px;
+    margin: 7px;
 }
 
-#dropdown-whatsapp {
-    background-color: rgb(7, 94, 84);
+.dropdown-contenido{
+    display: none;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 0 0 17px 17px;
+    max-height: 265px;
+    margin-bottom: 19px;
+    overflow-y: auto;
+}
+
+.dropdown-contenido a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.show {
+    display: block !important;
 }
 
 #dropdown-whatsapp-buscador {
@@ -145,29 +174,12 @@ a {
     outline: 1px solid #ddd;
 }
 
-#dropdown-whatsapp-enlaces {
-    background-color: #f6f6f6;
-    border: 1px solid #ddd;
-    border-radius: 0 0 17px 17px;
-    max-height: 265px;
-    margin-bottom: 19px;
-    overflow-y: auto;
-}
-
-#dropdown-whatsapp-enlaces a {
-    color: black;
-    padding: 12px 16px;
-    display: block;
-}
-
 #dropdown-whatsapp-enlaces a:hover {
     background-color: #25d366;
 }
 
-.dropdown-contenido{
-    display: none;
-}
 
-.show {
-    display: block !important;
+#dropdown-facultad a:hover {
+    color: #fff;
+    background-color: rgb(177, 0, 17);
 }

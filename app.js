@@ -1,6 +1,9 @@
 //Copiar enlace
 const shareButtons = document.querySelectorAll(".tile-share-button");
 
+shareButtons.forEach((shareButton) => 
+    shareButton.addEventListener("click", copyText));
+
 async function copyText(e) {
     e.preventDefault();
     const link = this.parentElement.getAttribute("href");
@@ -11,24 +14,40 @@ async function copyText(e) {
     }
 }
 
-shareButtons.forEach((shareButton) => 
-    shareButton.addEventListener("click", copyText));
 
-//Dropdown Whatsapp
+//Dropdown 
+//Event Listeners
 const dropdowns = document.querySelectorAll(".dropdown");
 
 dropdowns.forEach((dropdown) => {
-    dropdown.addEventListener("click", () => toggleDropdown(dropdown));
+    dropdown.addEventListener("click", () => {
+        toggleDropdown(dropdown);
+        toggleColor(dropdown);
+    });
 
+    //Evito que el evento se propague si clickeo un elemento hijo
     const children = Array.from(dropdown.children);
     const contenido = children.find((e) =>
         e.classList.contains("dropdown-contenido"),
     );
     contenido.addEventListener("click", (event) => {
-    event.stopPropagation();
+        event.stopPropagation();
   });
 });
 
+document.addEventListener("click", (e) => {
+    dropdowns.forEach((dropdown) => {
+        const esDropdown = e.target.closest(".dropdown");
+        const estaDentroDeDropdown = dropdown.contains(e.target);
+
+        if ((!esDropdown || !estaDentroDeDropdown) && isDropdownOpen(dropdown)) {
+            hideDropdown(dropdown);
+            toggleColor(dropdown);
+        }
+    });
+});
+
+//Funciones
 function toggleDropdown(dropdown) {
     const contenido = encontrarContenidoDelDropdown(dropdown);
     if (contenido) {
@@ -52,17 +71,31 @@ function encontrarContenidoDelDropdown(dropdown) {
     return children.find((e) => e.classList.contains("dropdown-contenido"));
 }
 
-document.addEventListener("click", (e) => {
-    const isDropdown = e.target.closest(".dropdown");
+function isDropdownOpen(dropdown) {
+    const contenido = encontrarContenidoDelDropdown(dropdown);
+    if (contenido) {
+        return contenido.classList.contains("show");
+    } else {
+        console.error("No se encontró el contenido del dropdown");
+    }
+}
 
-    dropdowns.forEach((dropdown) => {
-        const isClickedInsideDropdown = dropdown.contains(e.target);
+function toggleColor(element) {
+    const defaultColor = "rgb(37, 37, 37)";
+    const computedStyle = window.getComputedStyle(element);
+    const currentColor = computedStyle.backgroundColor;
 
-        if (!isDropdown || !isClickedInsideDropdown) {
-            hideDropdown(dropdown);
+    if (currentColor === defaultColor) {
+        if (element.id === "dropdown-whatsapp") {
+            element.style.backgroundColor = "rgb(7, 94, 84)";
+        } else if (element.id === "dropdown-facultad") {
+            element.style.backgroundColor = "rgb(135, 0, 17)";
         }
-    });
-});
+    } else {
+        element.style.backgroundColor = defaultColor;
+    }
+}
+
 
 function filterFunction() {
     var input, filter, ul, li, a, i;
