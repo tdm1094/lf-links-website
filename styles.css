@@ -167,6 +167,8 @@ a {
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
     width: 100%;
 }
 
