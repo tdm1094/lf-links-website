@@ -23,6 +23,7 @@ dropdowns.forEach((dropdown) => {
     dropdown.addEventListener("click", () => {
         toggleDropdown(dropdown);
         toggleColor(dropdown);
+        encontrarContenidoDelDropdown(dropdown).scrollIntoView({behavior: "smooth"});
     });
 
     //Evito que el evento se propague si clickeo un elemento hijo
@@ -90,6 +91,8 @@ function toggleColor(element) {
             element.style.backgroundColor = "rgb(7, 94, 84)";
         } else if (element.id === "dropdown-facultad") {
             element.style.backgroundColor = "rgb(135, 0, 17)";
+        } else if (element.id === "dropdown-ingreso") {
+            element.style.backgroundColor = "rgb(220, 75, 0)";
         }
     } else {
         element.style.backgroundColor = defaultColor;

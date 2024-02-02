@@ -161,12 +161,19 @@ a {
     display: block !important;
 }
 
+#dropdown-ingreso a:hover {
+    background-color: #ff9901;
+    color: #fff;
+}
+
 #dropdown-whatsapp-buscador {
     font-size: 16px;
     padding: 14px 20px 12px 45px;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
     width: 100%;
 }
 
