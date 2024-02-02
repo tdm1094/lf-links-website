@@ -91,6 +91,8 @@ function toggleColor(element) {
             element.style.backgroundColor = "rgb(7, 94, 84)";
         } else if (element.id === "dropdown-facultad") {
             element.style.backgroundColor = "rgb(135, 0, 17)";
+        } else if (element.id === "dropdown-ingreso") {
+            element.style.backgroundColor = "rgb(220, 75, 0)";
         }
     } else {
         element.style.backgroundColor = defaultColor;
