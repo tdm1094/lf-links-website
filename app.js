@@ -23,6 +23,7 @@ dropdowns.forEach((dropdown) => {
     dropdown.addEventListener("click", () => {
         toggleDropdown(dropdown);
         toggleColor(dropdown);
+        encontrarContenidoDelDropdown(dropdown).scrollIntoView({behavior: "smooth"});
     });
 
     //Evito que el evento se propague si clickeo un elemento hijo
