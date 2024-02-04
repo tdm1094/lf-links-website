@@ -161,6 +161,11 @@ a {
     display: block !important;
 }
 
+#dropdown-actividades a:hover {
+    background-color: #ff9901;
+    color: #fff;
+}
+
 #dropdown-ingreso a:hover {
     background-color: #ff9901;
     color: #fff;
