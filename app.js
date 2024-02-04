@@ -87,12 +87,21 @@ function toggleColor(element) {
     const currentColor = computedStyle.backgroundColor;
 
     if (currentColor === defaultColor) {
-        if (element.id === "dropdown-whatsapp") {
-            element.style.backgroundColor = "rgb(7, 94, 84)";
-        } else if (element.id === "dropdown-facultad") {
-            element.style.backgroundColor = "rgb(135, 0, 17)";
-        } else if (element.id === "dropdown-ingreso") {
-            element.style.backgroundColor = "rgb(220, 75, 0)";
+        switch (element.id) {
+            case "dropdown-whatsapp":
+                element.style.backgroundColor = "rgb(7, 94, 84)";
+                break;
+            case "dropdown-facultad":
+                element.style.backgroundColor = "rgb(135, 0, 17)";
+                break;
+            case "dropdown-ingreso":
+                element.style.backgroundColor = "rgb(220, 75, 0)";
+                break;
+            case "dropdown-actividades":
+                element.style.backgroundColor = "rgb(220, 75, 0)";
+                break;
+            default:
+                break;
         }
     } else {
         element.style.backgroundColor = defaultColor;
