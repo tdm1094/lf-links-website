@@ -195,3 +195,9 @@ a {
     color: #fff;
     background-color: rgb(177, 0, 17);
 }
+
+#btn-suma-apuntes img {
+    margin-top: 8px;
+    height: 45px;
+    width: 135px;
+}
