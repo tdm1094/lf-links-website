@@ -1,3 +1,21 @@
+const details = document.querySelectorAll('details');
+
+details.forEach(detail => {
+    detail.addEventListener("toggle", () => {
+        if (detail.open) {
+            setTargetDetail(detail);
+        }
+    });
+});
+
+function setTargetDetail(targetDetail) {
+    details.forEach(detail => {
+        if (detail !== targetDetail) {
+            detail.open = false;
+        }
+    });
+}
+
 function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("dropdown-whatsapp-buscador");
