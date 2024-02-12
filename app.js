@@ -1,20 +1,18 @@
-const details = document.querySelectorAll('details');
+const details = [...document.querySelectorAll("details")];
 
-details.forEach(detail => {
-    detail.addEventListener("toggle", () => {
-        if (detail.open) {
-            setTargetDetail(detail);
-        }
-    });
+document.addEventListener("click", (e) => {
+    //Si el elemento clickeado no es ni contiene un detalle, cerrar todos los detalles
+    if (!details.some((element) => element.contains(e.target))) {
+        details.forEach((detail) => (detail.open = false));
+    //Sino, cierro los detalles que no fueron clickeados
+    } else {
+        details
+            .filter((detail) => !detail.contains(e.target))
+            .forEach((detail) => {
+                detail.open = false;
+            });
+    }
 });
-
-function setTargetDetail(targetDetail) {
-    details.forEach(detail => {
-        if (detail !== targetDetail) {
-            detail.open = false;
-        }
-    });
-}
 
 function filterFunction() {
     var input, filter, ul, li, a, i;
