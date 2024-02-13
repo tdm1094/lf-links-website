@@ -11,6 +11,10 @@ document.addEventListener("click", (e) => {
             .forEach((detail) => {
                 detail.open = false;
             });
+        details
+            .find((detail) => detail.contains(e.target))
+            .scrollIntoView();
+
     }
 });
 
