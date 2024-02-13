@@ -9,10 +9,9 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Verdana, Tahoma, sans-serif;
-    height: 100vh;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    min-width: 100vw;
 }
 
 h1 {
@@ -23,6 +22,10 @@ h1 {
 a {
     color: rgb(240, 240, 240);
     text-decoration: none;
+}
+
+summary {
+    padding: 16px;
 }
 
 .container {
@@ -94,55 +97,7 @@ a {
     transform: scale(1.02);
 }
 
-.icon {
-    margin: 4px 8px;
-    position: relative;
-    height: 44px;
-    width: 44px;;
-}
-
-.icon svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-}
-
-.tile-share-button {
-    background-color: rgb(52, 52, 52);
-    border-radius: 20px;
-    margin: 8px;
-    position: relative;
-    height: 40px;
-    width: 40px;
-}
-
-.tile-share-button:active {
-    background-color: rgb(87, 87, 87);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-    transform: scale(0.98);
-}
-
-.tile-share-button svg {
-    color: rgb(0, 0, 0);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.dropdown {
-    display: block;
-}
-
-.dropdown p {
-    padding: 15px;
-    margin: 7px;
-}
-
 .dropdown-contenido{
-    display: none;
     background-color: #f6f6f6;
     border: 1px solid #ddd;
     border-radius: 0 0 17px 17px;
@@ -157,8 +112,8 @@ a {
     display: block;
 }
 
-.show {
-    display: block !important;
+#dropdown-actividades[open] {
+    background-color: rgb(220, 75, 0);
 }
 
 #dropdown-actividades a:hover {
@@ -166,9 +121,17 @@ a {
     color: #fff;
 }
 
+#dropdown-ingreso[open] {
+    background-color: rgb(220, 75, 0);
+}
+
 #dropdown-ingreso a:hover {
     background-color: #ff9901;
     color: #fff;
+}
+
+#dropdown-whatsapp[open] {
+    background-color: rgb(7, 94, 84);
 }
 
 #dropdown-whatsapp-buscador {
@@ -190,6 +153,9 @@ a {
     background-color: #25d366;
 }
 
+#dropdown-facultad[open] {
+    background-color: rgb(135, 0, 17);
+}
 
 #dropdown-facultad a:hover {
     color: #fff;
