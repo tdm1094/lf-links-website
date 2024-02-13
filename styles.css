@@ -25,15 +25,30 @@ a {
 }
 
 summary {
+    cursor: pointer;
     padding: 16px;
+    list-style: none;
+    margin-left: 10px;
+}
+
+summary::after {
+    content: "⏷";
+    margin-left: 5px;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+details[open] > summary:after {
+    content: "⏶";
 }
 
 .container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     max-width: 680px;
     width: 91%;
 }
@@ -88,7 +103,7 @@ summary {
     width: 100%;
 }
 
-.tile > :only-child {
+.tile> :only-child {
     flex-grow: 1;
 }
 
@@ -97,7 +112,7 @@ summary {
     transform: scale(1.02);
 }
 
-.dropdown-contenido{
+.dropdown-contenido {
     background-color: #f6f6f6;
     border: 1px solid #ddd;
     border-radius: 0 0 17px 17px;
@@ -160,6 +175,11 @@ summary {
 #dropdown-facultad a:hover {
     color: #fff;
     background-color: rgb(177, 0, 17);
+}
+
+#btn-suma-apuntes img:hover {
+    transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+    transform: scale(1.25);
 }
 
 #btn-suma-apuntes img {
