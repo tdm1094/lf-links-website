@@ -32,15 +32,14 @@ summary {
 }
 
 summary::after {
-    content: "⏷";
-    margin-left: 5px;
-    font-size: 1.2rem;
-    display: inline-block;
+    content: "⯆";
+    margin-left: 10px;
     transition: 0.2s;
 }
 
 details[open] > summary:after {
-    content: "⏶";
+    content: "⯅";
+    margin-left: 10px;
 }
 
 .container {
