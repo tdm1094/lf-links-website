@@ -28,9 +28,8 @@ a {
 
 summary {
     cursor: pointer;
-    padding: 16px;
+    padding: 16px 10px;
     list-style: none;
-    margin-left: 10px;
 }
 
 summary::after {
@@ -42,6 +41,7 @@ summary::after {
 details[open] > summary:after {
     content: "▴";
     margin-left: 10px;
+    transition: 0.2s;
 }
 
 .container {
