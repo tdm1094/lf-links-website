@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body {
     align-items: center;
     background-image: url("./images/fondo.webp");
@@ -26,20 +28,20 @@ a {
 
 summary {
     cursor: pointer;
-    padding: 16px;
+    padding: 16px 10px;
     list-style: none;
-    margin-left: 10px;
 }
 
 summary::after {
-    content: "⯆";
+    content: "▾";
     margin-left: 10px;
     transition: 0.2s;
 }
 
 details[open] > summary:after {
-    content: "⯅";
+    content: "▴";
     margin-left: 10px;
+    transition: 0.2s;
 }
 
 .container {
