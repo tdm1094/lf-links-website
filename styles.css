@@ -90,6 +90,13 @@ details[open] > summary:after {
     width: 85%;
 }
 
+.destacado {
+    background-color: rgb(230, 72, 0) !important;
+    box-shadow: rgba(240, 46, 0, 0.4) 5px 5px, 
+        rgba(240, 46, 0, 0.3) 10px 10px;
+    margin-bottom: 18px !important;
+}
+
 .tile {
     background-color: rgb(37, 37, 37);
     border-radius: 17px;
