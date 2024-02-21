@@ -120,6 +120,10 @@ details[open] > summary:after {
     transform: scale(1.02);
 }
 
+.dropdown[open] {
+    background-color: rgb(220, 75, 0);
+}
+
 .dropdown-contenido {
     background-color: #f6f6f6;
     border: 1px solid #ddd;
@@ -135,20 +139,7 @@ details[open] > summary:after {
     display: block;
 }
 
-#dropdown-actividades[open] {
-    background-color: rgb(220, 75, 0);
-}
-
-#dropdown-actividades a:hover {
-    background-color: #ff9901;
-    color: #fff;
-}
-
-#dropdown-ingreso[open] {
-    background-color: rgb(220, 75, 0);
-}
-
-#dropdown-ingreso a:hover {
+.dropdown-contenido a:hover {
     background-color: #ff9901;
     color: #fff;
 }
