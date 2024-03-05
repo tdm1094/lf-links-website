@@ -144,8 +144,21 @@ details[open] > summary:after {
     color: #fff;
 }
 
-#dropdown-whatsapp[open] {
+.dropdown-whatsapp[open] {
     background-color: rgb(7, 94, 84);
+}
+
+.dropdown-whatsapp a:hover {
+    background-color: #25d366;
+}
+
+.dropdown-facultad[open] {
+    background-color: rgb(135, 0, 17);
+}
+
+.dropdown-facultad a:hover {
+    color: #fff;
+    background-color: rgb(177, 0, 17);
 }
 
 #dropdown-whatsapp-buscador {
@@ -161,19 +174,6 @@ details[open] > summary:after {
 
 #dropdown-whatsapp-buscador:focus {
     outline: 1px solid #ddd;
-}
-
-#dropdown-whatsapp-enlaces a:hover {
-    background-color: #25d366;
-}
-
-#dropdown-facultad[open] {
-    background-color: rgb(135, 0, 17);
-}
-
-#dropdown-facultad a:hover {
-    color: #fff;
-    background-color: rgb(177, 0, 17);
 }
 
 #logo-club-devops {
