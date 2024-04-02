@@ -97,6 +97,7 @@ details[open] > summary:after {
     margin-bottom: 18px !important;
 }
 
+
 .tile {
     background-color: rgb(37, 37, 37);
     border-radius: 17px;
@@ -109,6 +110,11 @@ details[open] > summary:after {
     text-shadow: 0.3px 0.3px #fff;
     text-transform: uppercase;
     width: 100%;
+}
+
+.tile > p {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tile> :only-child {
@@ -176,31 +182,35 @@ details[open] > summary:after {
     outline: 1px solid #ddd;
 }
 
-#logo-club-devops {
+#logo {
     height: 1.5rem;
     width: 1.5rem;
-    margin-right: 8px;
-    margin-bottom: -5px;
-    margin-left: -8px;
-}
-
-#logo-codear {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: 8px;
+    /* margin-right: 3px; */
     margin-bottom: -5px;
     margin-left: -8px;
     border-radius: 100%;
 }
 
-#btn-suma-apuntes img:hover {
-    transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
-    transform: scale(1.25);
+#btn-suma-tu-apunte {
+    background-color: rgb(230, 72, 0);
+    flex-basis: 45%;
 }
 
-#btn-suma-apuntes img {
-    margin-top: 8px;
-    height: 45px;
-    width: 135px;
+#btn-sumate-a-lf {
+    background-color: rgb(230, 72, 0);
+}
+
+#btn-espacios {
+    flex-basis: 70%;
+}
+
+@media screen and (min-width: 650px) {
+
+    .fila {
+        display: flex;
+        justify-content: space-between;
+        width: 102%;
+    }
+
 }
 
