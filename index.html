@@ -9,9 +9,13 @@
     <!-- Carga de archivos (fuentes, SDKs) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" href="images/logo192.png" sizes="32x32">
+    <link rel="icon" href="images/logo192.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/logo192.png">
     <link href="https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+    
 
     <!-- CSS (incrustado) -->
     <style>
@@ -41,8 +45,9 @@
             justify-content: center;
             align-items: center;
         }
-        bottom {
+        footer { 
             display: flex;
+            border-bottom: 3px solid white;
             width: 100%;
             min-height: 100px;
             justify-content: center;
@@ -51,7 +56,7 @@
         .redes {
             display: flex;
             gap: 15px; /* espacio entre iconos */
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
             width: 100%;
             border-bottom: 3px solid white;
@@ -289,13 +294,12 @@
                 width: 94vw;
             }
         }
+
     </style>
 </head>
-<body>
-    <header>
-    </header>
+    <body>
+    <header></header>
 
-    <!-- Redes -->
     <div class="redes">
         <a href="https://www.instagram.com/lafuenteunlp/" target="_blank" rel="noopener">
             <img src="images/iglogo.svg" alt="Instagram">
@@ -312,127 +316,170 @@
     <div class="grid-container" role="navigation" aria-label="Accesos rápidos">
         <!-- Cuadrado 1 -->
         <div class="grid-item">
-            <img src="images/drivelogo.png" alt="Drive Apuntes">
-            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Map_Holder.html" target="_blank">Drive de Apuntes</a>
+            <img src="images/drivelogo.png" href="https://drive.google.com/drive/folders/1qd9RpVCq1W7ivdNRD45UG4uP8hdSC_tk?usp=sharing" alt="Drive Apuntes">
+            <a href="https://drive.google.com/drive/folders/1qd9RpVCq1W7ivdNRD45UG4uP8hdSC_tk?usp=sharing" target="_blank" rel="noopener">Drive de Apuntes</a>
         </div>
 
-        <!-- Cuadrado Menus (abre modal) -->
-        <div class="grid-item-menu" data-img="images/wsplogo.png" data-title="Grupos de Whatsapp" role="button" tabindex="0">
-            <img src="images/wsplogo.png" alt="Grupos">
+        <!-- Cuadrado 2 -->
+        <div class="grid-item-menu"
+             data-img="images/wsplogo.jpeg"
+             data-title="Grupos de Whatsapp"
+             data-desc="Elegí tu carrera:"
+             data-options='[
+               {"label":"Licenciaturas  APU y ATIC","href":"gruposLIC.html","target":"_blank"},
+               {"label":"Ingenieria en Computacion","href":"gruposING.html","target":"_blank"},
+               {"label":"Ciencia de Datos","href":"gruposCDO.html","target":"_blank"}             
+            ]'
+             role="button" tabindex="0">
+            <img src="images/wsplogo.jpeg" alt="Grupos">
             <a href="#" class="titulo">Grupos de Whatsapp</a>
         </div>
 
         <!-- Cuadrado 3 -->
-        <div class="grid-item">
-            <img src="images/cdalogo.png" alt="Rio de La Plata">
-            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\RDLP_Holder.html" target="_blank">Clases De Apoyo</a>
-        </div>
+        <div class="grid-item-menu"
+             data-img="images/cdalogo.png"
+             data-title="Clases de Apoyo"
+             data-desc="Elegí dónde querés ir:"
+             data-options='[
+               {"label":"Clases Grabadas","href":"https://www.youtube.com/lafuenteunlp","target":"_blank"},
+               {"label":"Formulario","href":"#","target":"_blank"}
+             ]'
+             role="button" tabindex="0">
+            <!-- corregí el nombre del archivo aquí (transplogo.png) -->
+            <img src="images/cdalogo.png" alt="Clases de Apoyo">
+            <a href="#" class="titulo">Clases de Apoyo</a>
+        </div> 
 
         <!-- Cuadrado 4 -->
-        <div class="grid-item">
-            <img src="images/transplogo.png" alt="Proyecto 7">
-            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Map_Holder.html" target="_blank">Transporte Universitario</a>
-        </div>
+        <div class="grid-item-menu"
+             data-img="images/transplogo.png"
+             data-title="Transporte"
+             data-desc="Elegí dónde querés ir:"
+             data-options='[
+               {"label":"Boleto Universitario","href":"boleto.html","target":"_blank"},
+               {"label":"Horarios y Recorridos","href":"transporte.html","target":"_blank"},
+               {"label":"Formulario Min. Transporte","href":"https://denuncias-bes.transporte.gba.gob.ar/denunciasboleto.php","target":"_blank"}
+             ]'
+             role="button" tabindex="0">
+            <!-- corregí el nombre del archivo aquí (transplogo.png) -->
+            <img src="images/transplogo.png" alt="Transporte">
+            <a href="#" class="titulo">Transporte</a>
+        </div> 
 
         <!-- Cuadrado 5 -->
         <div class="grid-item">
-            <img src="images/Sumatelogo.png" alt="Argentina">
-            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Argentina_Holder.html" target="_blank">¡Sumate a La Fuente!</a>
+            <img src="images/Sumatelogo.png" href="https://ig.me/m/lafuenteunlp?text=me%20quiero%20sumar!" alt="Sumate">
+            <a href="https://ig.me/m/lafuenteunlp?text=me%20quiero%20sumar!" target="_blank" rel="noopener">¡Sumate a La Fuente!</a>
         </div>
 
         <!-- Cuadrado 6 -->
-        <div class="grid-item">
-            <img src="images/calendariologo.png" alt="Proyecto 4">
-            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Map_Holder.html" target="_blank">Calendario Academico</a> 
-        </div>
-    </div>
+        <div class="grid-item-menu"
+             data-img="images/calendariologo.png"
+             data-title="Calendarios Academicos"
+             data-desc="Elegí tu carrera:"
+             data-options='[
+               {"label":"Licenciaturas  APU y ATIC","href":"https://www.info.unlp.edu.ar/calendario-academico-2025/","target":"_blank"},
+               {"label":"Ingenieria en Computacion","href":"https://ic.info.unlp.edu.ar/calendario-academico-2025/","target":"_blank"},
+               {"label":"Ciencia de Datos","href":"https://cdo.info.unlp.edu.ar/calendario-academico/","target":"_blank"}
+             ]'
+             role="button" tabindex="0">
+            <img src="images/calendariologo.png" alt="Calendario">
+            <a href="#" class="titulo">Calendario Academico</a>
+        </div> 
 
     <!-- OVERLAY + MODAL (reutilizable para todos los .grid-item-menu) -->
-    <div class="overlay" id="overlay" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal" role="document" aria-labelledby="modal-title">
-            <div class="modal-header">
-                <div class="modal-title" id="modal-title">Seleccioná una opción</div>
-                <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
-            </div>
+        <div class="overlay" id="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+            <div class="modal" role="document" aria-labelledby="modal-title">
+                <div class="modal-header">
+                    <div class="modal-title" id="modal-title">Seleccioná una opción</div>
+                    <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+                </div>
 
-            <div class="modal-body">
-                <p id="modal-desc">Elegí qué querés hacer:</p>
-                <ul class="options" id="modal-options">
-                    <li><a class="btn" id="opt-1" href="C:\Users\Julian\Documents\GitHub\La Fuente WEB\lafuente.com.ar\gruposLIC.html" target="_blank" rel="noopener">Licenciaturas  APU y ATIC</a></li>
-                    <li><a class="btn" id="opt-2" href="C:\Users\Julian\Documents\GitHub\La Fuente WEB\lafuente.com.ar\gruposING.html" target="_blank" rel="noopener">Ingenieria en Computacion</a></li>
-                    <li><a class="btn" id="opt-3" href="C:\Users\Julian\Documents\GitHub\La Fuente WEB\lafuente.com.ar\gruposCDO.html" target="_blank" rel="noopener">Ciencia de Datos</a></li>
-                </ul>
+                <div class="modal-body">
+                    <p id="modal-desc">Elegí tu carrera:</p>
+                    <ul class="options" id="modal-options">
+                        <!-- Los items se generarán dinámicamente mediante JS -->
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- JS: comportamiento modal -->
     <script>
-        (function () {
-            const overlay = document.getElementById('overlay');
-            const closeBtn = document.getElementById('modal-close');
-            const modalTitle = document.getElementById('modal-title');
-            const modalDesc = document.getElementById('modal-desc');
-            const modalOptions = document.getElementById('modal-options');
+    (function () {
+        const overlay     = document.getElementById('overlay');
+        const closeBtn    = document.getElementById('modal-close');
+        const modalTitle  = document.getElementById('modal-title');
+        const modalDesc   = document.getElementById('modal-desc');
+        const modalOptions= document.getElementById('modal-options');
 
-            // función para abrir modal con contenidos dinámicos (si los quisieras pasar por data-*)
-            function openModalFromItem(item) {
-                const title = item.getAttribute('data-title') || 'Menú';
-                modalTitle.textContent = title;
-                modalDesc.textContent = 'Seleccioná una opción para ' + title + '.';
+        function safeParseJSON(str) {
+            if (!str) return null;
+            try { return JSON.parse(str); } catch(e) { return null; }
+        }
 
-                overlay.classList.add('activo');
-                overlay.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden'; // bloquear scroll fondo
+        function renderOptions(list) {
+            modalOptions.innerHTML = '';
+            (list || []).forEach((opt, i) => {
+                const li = document.createElement('li');
+                const a  = document.createElement('a');
+                a.className = 'btn' + (opt.variant === 'secondary' ? ' secondary' : '');
+                a.textContent = opt.label || ('Opción ' + (i + 1));
+                a.href = opt.href || '#';
+                a.rel = 'noopener';
+                if (opt.target) a.target = opt.target;
+                li.appendChild(a);
+                modalOptions.appendChild(li);
+            });
+        }
 
-                // accesibilidad: focus en el cierre
-                closeBtn.focus();
-            }
+        function openModalFromItem(item) {
+            const title = item.getAttribute('data-title') || 'Menú';
+            const desc  = item.getAttribute('data-desc')  || 'Seleccioná una opción:';
+            const opts  = safeParseJSON(item.getAttribute('data-options')) || [];
 
-            function closeModal() {
-                overlay.classList.remove('activo');
-                overlay.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-            }
+            modalTitle.textContent = title;
+            modalDesc.textContent  = desc;
+            renderOptions(opts);
 
-            // Abrir modal al click/tap sobre cualquier .grid-item-menu
-            document.querySelectorAll('.grid-item-menu').forEach(item => {
-                item.addEventListener('click', function (e) {
-                    // evitar navegación si el título es un <a href="#">
-                    if (e.target.tagName.toLowerCase() === 'a') e.preventDefault();
+            overlay.classList.add('activo');
+            overlay.setAttribute('aria-hidden','false');
+            document.body.style.overflow = 'hidden';
+            closeBtn.focus();
+        }
+
+        function closeModal() {
+            overlay.classList.remove('activo');
+            overlay.setAttribute('aria-hidden','true');
+            document.body.style.overflow = '';
+        }
+
+        // Delegación para todos los .grid-item-menu
+        document.querySelectorAll('.grid-item-menu').forEach(item => {
+            item.addEventListener('click', (e) => {
+                if (e.target.tagName.toLowerCase() === 'a') e.preventDefault();
+                openModalFromItem(item);
+            });
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
                     openModalFromItem(item);
-                });
-
-                // soporte teclado (Enter / Space)
-                item.addEventListener('keydown', function (e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        item.click();
-                    }
-                });
+                }
             });
+        });
 
-            // Cerrar con botón X
-            closeBtn.addEventListener('click', closeModal);
-
-            // Cerrar al click fuera del modal
-            overlay.addEventListener('click', function (e) {
-                if (e.target === overlay) closeModal();
-            });
-
-            // Cerrar con ESC
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && overlay.classList.contains('activo')) closeModal();
-            });
-
-            // Evitar que clicks dentro de las opciones cierren por bubbling
-            modalOptions.addEventListener('click', function (e) {
-                e.stopPropagation();
-            });
-        })();
-
+        // Cierres
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('activo')) closeModal();
+        });
+    })();
     </script>
-
 </body>
-<bottom><div class="commonninja_component pid-2af6a870-774f-41d7-bc2c-64114e6cec67"></div> </bottom>
+<footer>
+    <div class="commonninja_component pid-2af6a870-774f-41d7-bc2c-64114e6cec67"></div>
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>   
+</footer>
 </html>
