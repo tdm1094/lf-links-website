@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>La Fuente. Facultad de Informatica</title>
+    <style>
+        @import url(https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani);
+        
+        @font-face {
+            font-family: "Rajdhani";
+            src: url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.eot");
+            src: url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.svg#Rajdhani")format("svg");
+            }
+        body {
+            font-family: "Rajdhani";
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-image: url(images/background.png);
+            background-position: center;
+            }
+        h1, h2, h3 {
+            text-align: center;
+            color: White;
+            font-family: "Rajdhani";
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 700;
+            font-variation-settings:  "wdth" 100;
+            -webkit-text-stroke: 1px #ff6500;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px; 
+            border-bottom: 3px solid white;
+        }
+        .grid-myButton {
+            background-color: #FF914D;
+            opacity: 1;
+            border: 1px solid #ff6500 ;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .grid-myButton:hover {
+            transform: translateY(-5px);
+            transform: cha(1.0);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+        .grid-myButton img {
+            width: 100%;  /* mientras sean images cuadradas se ve bien */
+            height: 100%;
+            object-fit: cover;
+            background-color: white;
+        }
+        .grid-myButton a {
+            display: block;
+            font-size: 1.1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .grid-myButton a:hover {
+            text-decoration: underline;
+        }
+        header{
+        display: flex;
+        background:url(images/Top.svg)no-repeat;
+        background-position: center;
+        background-size:cover;
+        border-bottom: 3px solid white;
+        width: 100%;
+        min-height: 100px;
+        justify-content: center;
+        }
+        .redes {
+            display: flex;
+            gap: 15px; /* espacio entre iconos */
+            justify-content: center;
+            width: 100%;
+            border-bottom: 3px solid white;
+        }
+        .redes a img {
+            width: 40px; /* tamaño del logo */
+            height: 40px;
+            transition: transform 0.2s;
+        }
+        .redes a img:hover {
+            transform: scale(1.2); /* efecto al pasar el mouse */
+        }
+        .myButton {
+            display: block;
+            color: rgb(255, 255, 255); 
+            font-size: 20px; 
+            line-height: 30px; 
+            padding: 10px; 
+            border-radius: 50px; 
+            font-family: "Rajdhani"; 
+            background-color: #FF914D; 
+            border: 2px solid #FF6500;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .myButton:hover {
+            background: #ffc09a; 
+        }
+        .myButton:active {
+            background: #ffc09a; 
+        }
+  </style>
+</head>
+<body>
+    <header> </header>
+    <div class="container">
+        <a class="myButton" href="https://chat.whatsapp.com/LioKgdwHu965vVhJoiXmoA">PROGRAMACIÓN 1 (RED.)</a>
+        <a class="myButton" href="https://chat.whatsapp.com/I0blW51ZcCMGvsc7bF7ftZ">FUNDAMENTOS DE ARQUITECTURAS DE COMPUTADORAS (RED.) </a>
+        <a class="myButton" href="https://chat.whatsapp.com/IrZDst1D68L7waEu7s8rby">PROGRAMACIÓN 2 </a>
+        <a class="myButton" href="blank__">ARQUITECTURA DE COMPUTADORAS (RED.)</a>
+        <a class="myButton" href="https://chat.whatsapp.com/Iud9QioCd4ICHszqGklxAz">TALLER DE LENGUAJES 1 (RED.)</a>
+        <a class="myButton" href="https://chat.whatsapp.com/IrdNYaSVLymAYPuLb00Ewl">CONCEPTOS DE SISTEMAS OPERATIVOS</a>
+        <a class="myButton" href="https://chat.whatsapp.com/GfW8NsUfYjA0T5AzPDu0a7">TALLER DE LENGUAJES 2</a>
+    </div>
+</body>
