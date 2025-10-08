@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Datos del documento -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Fuente. Facultad de Informatica</title>
+
+    <!-- Carga de archivos (fuentes, SDKs) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+
+    <!-- CSS (incrustado) -->
+    <style>
+        /* Fuentes importadas (dejadas tal como solicitaste) */
+        @import url(https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani);
+
+        @font-face {
+            font-family: "Rajdhani";
+            src: url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.eot");
+            src: url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.eot?#iefix") format("embedded-opentype"),
+                 url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.woff2") format("woff2"),
+                 url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.woff") format("woff"),
+                 url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.ttf") format("truetype"),
+                 url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.svg#Rajdhani") format("svg");
+            font-display: swap;
+        }
+
+        /* --- Global / Header --- */
+        header {
+            display: flex;
+            background: url(images/Top.svg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-bottom: 3px solid white;
+            width: 100%;
+            min-height: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        bottom {
+            display: flex;
+            width: 100%;
+            min-height: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        .redes {
+            display: flex;
+            gap: 15px; /* espacio entre iconos */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-bottom: 3px solid white;
+        }
+
+        .redes a img {
+            width: 40px; /* tamaño del logo */
+            height: 40px;
+            transition: transform 0.2s;
+        }
+
+        .redes a img:hover {
+            transform: scale(1.2); /* efecto al pasar el mouse */
+        }
+
+        /* --- Body / Tipografía --- */
+        body {
+            font-family: "Rajdhani", system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(images/background.png);
+            background-position: center;
+            color: white;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: white;
+            font-family: "Rajdhani", system-ui, sans-serif;
+            font-weight: 700;
+            -webkit-text-stroke: 1px #ff6500;
+            margin: 0.25rem 0;
+        }
+
+        /* --- Grid: siempre 3 columnas --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* siempre 3 columnas */
+            gap: 20px;
+            padding: 20px;
+            border-bottom: 3px solid white;
+            width: 100%;
+            box-sizing: border-box;
+            max-width: 1400px;
+        }
+
+        /* Items generales */
+        .grid-item,
+        .grid-item-menu {
+            background-color: #FF914D;
+            opacity: 1;
+            border: 1px solid #ff6500;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        /* Hover suave para items */
+        .grid-item:hover,
+        .grid-item-menu:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.12);
+        }
+
+        /* Imágenes dentro de items: altura estable para consistencia */
+        .grid-item img,
+        .grid-item-menu img {
+            width: 100%;
+            height: 400px; /* altura estable */
+            object-fit: cover;
+            background-color: white;
+            display: block;
+        }
+
+        /* Titulos / enlaces en los items */
+        .grid-item a,
+        .grid-item-menu a {
+            display: block;
+            font-size: 1.05rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 8px;
+            transition: opacity 0.25s ease;
+        }
+
+        .grid-item a:hover,
+        .grid-item-menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- OVERLAY CENTRADO Y RESPONSIVE --- */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);           /* semi-transparente para tapar contenido */
+            display: none;                           /* oculto por defecto */
+            z-index: 9999;                           /* por encima de todo */
+            padding: 0px;
+            margin: 0px;
+            justify-content: center;                 /* centra horizontal */
+            align-items: center;                     /* centra vertical */
+            overflow: auto;                          /* scroll si el modal es alto */
+        }
+
+        .overlay.activo {
+            display: flex;                           /* mostrar y centrar */
+        }
+
+        /* --- MODAL CENTRADO --- */
+        .modal {
+            width: 100%;                 /* se adapta a pantallas chicas */
+            max-height: 90vh;                        /* evita que se salga de la pantalla */
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-position: center;
+            color: #222;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            overflow: hidden;
+            transform: translateY(8px);
+            animation: pop .18s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Animación */
+        @keyframes pop {
+            from { transform: translateY(18px) scale(.98); opacity: 0; }
+            to   { transform: translateY(0)   scale(1);    opacity: 1; }
+        }
+
+        /* Header / Close */
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            background: #FF914D; /* tono naranja acorde */
+            color: white;
+        }
+
+        .modal-title {
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
+        .modal-close {
+            margin-left: auto;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .modal-close:focus {
+            outline: 2px solid rgba(255,255,255,0.2);
+        }
+
+        /* --- CUERPO DEL MODAL (LISTA VERTICAL) --- */
+        .modal-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;       /* centra el contenido dentro */
+            gap: 12px;
+            overflow: auto;            /* scroll si hay muchas opciones */
+            background: rgba(255,255,255,0.92);
+        }
+
+        /* Párrafo descriptivo (opcional) */
+        .modal-body p {
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Contenedor de opciones como LISTA */
+        .modal-body .options {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;                 /* lista vertical con separación */
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            align-items: center;           /* centra la lista horizontalmente */
+        }
+
+        /* Botones como ítems de lista */
+        .modal-body .btn {
+            font-family: "Rajdhani", system-ui, sans-serif;
+            color: #ffffff;
+            display: block;                /* ocupa todo el ancho del contenedor */
+            width: min(320px, 90%);
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #FF6500;
+            background-color: #FF914D;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+
+        .modal-body .btn:hover {
+            filter: brightness(0.95);
+        }
+
+        .modal-body .btn.secondary {
+            background: #ffffff;
+            color: #FF6500;
+            border-color: #FF6500;
+        }
+
+        /* --- Responsive: NO cambiar columnas, solo ajustes visuales --- */
+        @media (max-width: 480px) {
+            .grid-item img,
+            .grid-item-menu img {
+                height: 120px;
+            }
+            .modal {
+                width: 94vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    </header>
+
+    <!-- Redes -->
+    <div class="redes">
+        <a href="https://www.instagram.com/lafuenteunlp/" target="_blank" rel="noopener">
+            <img src="images/iglogo.svg" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/@LaFuenteunlp" target="_blank" rel="noopener">
+            <img src="images/ytlogo.svg" alt="Youtube">
+        </a>
+        <a href="https://discord.gg/ZtFbdk4Pmw" target="_blank" rel="noopener">
+            <img src="images/dclogo.svg" alt="Discord">
+        </a>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid-container" role="navigation" aria-label="Accesos rápidos">
+        <!-- Cuadrado 1 -->
+        <div class="grid-item">
+            <img src="images/drivelogo.png" alt="Drive Apuntes">
+            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Map_Holder.html" target="_blank">Drive de Apuntes</a>
+        </div>
+
+        <!-- Cuadrado Menus (abre modal) -->
+        <div class="grid-item-menu" data-img="images/wsplogo.png" data-title="Grupos de Whatsapp" role="button" tabindex="0">
+            <img src="images/wsplogo.png" alt="Grupos">
+            <a href="#" class="titulo">Grupos de Whatsapp</a>
+        </div>
+
+        <!-- Cuadrado 3 -->
+        <div class="grid-item">
+            <img src="images/cdalogo.png" alt="Rio de La Plata">
+            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\RDLP_Holder.html" target="_blank">Clases De Apoyo</a>
+        </div>
+
+        <!-- Cuadrado 4 -->
+        <div class="grid-item">
+            <img src="images/transplogo.png" alt="Proyecto 7">
+            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Map_Holder.html" target="_blank">Transporte Universitario</a>
+        </div>
+
+        <!-- Cuadrado 5 -->
+        <div class="grid-item">
+            <img src="images/Sumatelogo.png" alt="Argentina">
+            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Argentina_Holder.html" target="_blank">¡Sumate a La Fuente!</a>
+        </div>
+
+        <!-- Cuadrado 6 -->
+        <div class="grid-item">
+            <img src="images/calendariologo.png" alt="Proyecto 4">
+            <a href="C:\Users\Julian\Documents\GitHub\lafuente.com.ar\Map_Holder.html" target="_blank">Calendario Academico</a> 
+        </div>
+    </div>
+
+    <!-- OVERLAY + MODAL (reutilizable para todos los .grid-item-menu) -->
+    <div class="overlay" id="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal" role="document" aria-labelledby="modal-title">
+            <div class="modal-header">
+                <div class="modal-title" id="modal-title">Seleccioná una opción</div>
+                <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <p id="modal-desc">Elegí qué querés hacer:</p>
+                <ul class="options" id="modal-options">
+                    <li><a class="btn" id="opt-1" href="C:\Users\Julian\Documents\GitHub\La Fuente WEB\lafuente.com.ar\gruposLIC.html" target="_blank" rel="noopener">Licenciaturas  APU y ATIC</a></li>
+                    <li><a class="btn" id="opt-2" href="C:\Users\Julian\Documents\GitHub\La Fuente WEB\lafuente.com.ar\gruposING.html" target="_blank" rel="noopener">Ingenieria en Computacion</a></li>
+                    <li><a class="btn" id="opt-3" href="C:\Users\Julian\Documents\GitHub\La Fuente WEB\lafuente.com.ar\gruposCDO.html" target="_blank" rel="noopener">Ciencia de Datos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS: comportamiento modal -->
+    <script>
+        (function () {
+            const overlay = document.getElementById('overlay');
+            const closeBtn = document.getElementById('modal-close');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalOptions = document.getElementById('modal-options');
+
+            // función para abrir modal con contenidos dinámicos (si los quisieras pasar por data-*)
+            function openModalFromItem(item) {
+                const title = item.getAttribute('data-title') || 'Menú';
+                modalTitle.textContent = title;
+                modalDesc.textContent = 'Seleccioná una opción para ' + title + '.';
+
+                overlay.classList.add('activo');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; // bloquear scroll fondo
+
+                // accesibilidad: focus en el cierre
+                closeBtn.focus();
+            }
+
+            function closeModal() {
+                overlay.classList.remove('activo');
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            // Abrir modal al click/tap sobre cualquier .grid-item-menu
+            document.querySelectorAll('.grid-item-menu').forEach(item => {
+                item.addEventListener('click', function (e) {
+                    // evitar navegación si el título es un <a href="#">
+                    if (e.target.tagName.toLowerCase() === 'a') e.preventDefault();
+                    openModalFromItem(item);
+                });
+
+                // soporte teclado (Enter / Space)
+                item.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        item.click();
+                    }
+                });
+            });
+
+            // Cerrar con botón X
+            closeBtn.addEventListener('click', closeModal);
+
+            // Cerrar al click fuera del modal
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeModal();
+            });
+
+            // Cerrar con ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && overlay.classList.contains('activo')) closeModal();
+            });
+
+            // Evitar que clicks dentro de las opciones cierren por bubbling
+            modalOptions.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        })();
+
+    </script>
+
+</body>
+<bottom><div class="commonninja_component pid-2af6a870-774f-41d7-bc2c-64114e6cec67"></div> </bottom>
+</html>

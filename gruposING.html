@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>La Fuente. Facultad de Informatica</title>
+    <style>
+        @import url(https://db.onlinewebfonts.com/c/3e09062e3b0ce6bb44ab60de3bca0374?family=Rajdhani);
+        
+        @font-face {
+            font-family: "Rajdhani";
+            src: url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.eot");
+            src: url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.eot?#iefix")format("embedded-opentype"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.woff2")format("woff2"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.woff")format("woff"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.ttf")format("truetype"),
+            url("https://db.onlinewebfonts.com/t/3e09062e3b0ce6bb44ab60de3bca0374.svg#Rajdhani")format("svg");
+            }
+        body {
+            font-family: "Rajdhani";
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(images/background.png);
+            background-position: center;
+            }
+        h1, h2, h3 {
+            text-align: center;
+            color: White;
+            font-family: "Rajdhani";
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 700;
+            font-variation-settings:  "wdth" 100;
+            -webkit-text-stroke: 1px #ff6500;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px; 
+            border-bottom: 3px solid white;
+        }
+        .grid-item {
+            background-color: #FF914D;
+            opacity: 1;
+            border: 1px solid #ff6500 ;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+            transform: cha(1.0);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 100%;  /* mientras sean images cuadradas se ve bien */
+            height: 100%;
+            object-fit: cover;
+            background-color: white;
+        }
+        .grid-item a {
+            display: block;
+            font-size: 1.1rem;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .grid-item a:hover {
+            text-decoration: underline;
+        }
+        header{
+        display: flex;
+        background:url(images/Top.svg)no-repeat;
+        background-position: center;
+        background-size:cover;
+        border-bottom: 3px solid white;
+        width: 100%;
+        min-height: 100px;
+        justify-content: center;
+        align-items: center
+        }
+        .redes {
+            display: flex;
+            gap: 15px; /* espacio entre iconos */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-bottom: 3px solid white;
+        }
+        .redes a img {
+            width: 40px; /* tamaño del logo */
+            height: 40px;
+            transition: transform 0.2s;
+        }
+        .redes a img:hover {
+            transform: scale(1.2); /* efecto al pasar el mouse */
+        }
+  </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <h2></h2>
+    </header>
+    <div class="redes">
+        <a href="https://www.instagram.com/lafuenteunlp/" target="https://www.instagram.com/lafuenteunlp/" rel="noopener">
+            <img src="images/iglogo.svg" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/@LaFuenteunlp" target="https://www.youtube.com/@LaFuenteunlp" rel="noopener">
+            <img src="images/ytlogo.svg" alt="Youtube">
+        </a>
+        <a href="https://discord.gg/ZtFbdk4Pmw" target="https://discord.gg/ZtFbdk4Pmw" rel="noopener">
+            <img src="images/dclogo.svg" alt="Discord">
+        </a>
+    </div>
+    
+    <div class="grid-container">
+</body>
