@@ -1,6 +1,7 @@
 {
     "name": "La Fuente",
     "short_name": "La Fuente",
+    "start_url":"index.html",
     "icons": [
         {
             "src": "images/logo192.png",
@@ -16,4 +17,5 @@
     "theme_color": "orange",
     "background_color": "orange",
     "display": "standalone"
+
 }
