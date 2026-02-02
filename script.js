@@ -1,10 +1,3 @@
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-            .then(reg => console.log('Service Worker registrado correctamente'))
-            .catch(err => console.warn('Error al registrar el sw', err));
-    });
-}
 // Funciones de utilidad
 function actualizarFechaCalendario() {
     const Dia = document.getElementById('dia');
