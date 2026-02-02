@@ -3,7 +3,7 @@
     "name": "La Fuente - Informática UNLP",
     "short_name": "La Fuente",
     "description": "App informativa de la Facultad de Informática UNLP",
-    "start_url": "/index.html",
+    "start_url": "links.lafuenteunlp.com.ar/",
     "scope": "/",
     "display": "standalone",
     "background_color": "#002a62",
@@ -24,3 +24,4 @@
         }
     ]
 }
+
