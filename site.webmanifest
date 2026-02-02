@@ -1,19 +1,20 @@
 {
-    "name": "La Fuente - Facultad de Informatica",
-    "short_name": "La Fuente",
-    "icons": [
-        {
-            "src": "images/logos192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "images/logo512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "short_name": "La Fuente",
+  "name": "La Fuente - Facultad De Informatica",
+  "icons": [
+    {
+      "src": "images/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "white"
 }
