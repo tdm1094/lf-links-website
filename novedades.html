@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fuente - Facultad De Informatica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="" onerror="this.style.display='none'">
+            <span>LA FUENTE</span>
+        </a>
+        <button class="menu-toggle-btn" onclick="toggleMenu()">☰</button>
+    </div>
+</header>
+
+<nav id="side-menu" class="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <div class="menu-content">
+        <span class="tag" style="color: var(--orange3);">NAVEGACIÓN</span>
+        <a href="index.html">Inicio</a>
+        <a href="https://drive.google.com/drive/folders/1qd9RpVCq1W7ivdNRD45UG4uP8hdSC_tk?usp=sharing">Drive</a>
+        <a href="https://ideas.info.unlp.edu.ar/login">IDEAS</a>
+        <a href="https://www.instagram.com/LAFUENTEUNLP">Actividades</a>
+        <a href="https://www.instagram.com/LAFUENTEUNLP">Extension</a>
+    </div>
+</nav>
+
+<main class="news-container">
+    
+    <article class="news-card">
+        <div class="news-image" style="background-image: url('images/novedad2.jpg');"></div>
+        <div class="news-body">
+            <span class="tag" style="color: var(--orange3);">ESTUDIANTILES</span>
+            <h2>VIVIR EN LA PLATA</h2>
+                <p>🗺️¿Te mudaste a La Plata/Berisso/Ensenada? Hicimos un drive colaborativo con recomendaciones para buscar alojamiento, de lugares para pasear y hacer planes en nuestra hermosa ciudad
+                <br>Si tenes info que le pueda servir a otro, avisanos así lo sumamos 🙌</p>
+            <a href="https://docs.google.com/document/d/1DBppA9kJDytw3tJPlc3OJVR4HtxnObiuPZiMdTD0iho/edit?usp=drivesdk" class="btn-action">Leer más</a>
+        </div>
+    </article>
+
+    <article class="news-card">
+        <div class="news-image" style="background-image: url('images/novedad1.jpg');"></div>
+        <div class="news-body">
+            <span class="tag" style="color: var(--blue);">ACADÉMICO</span>
+            <h2>MESA DE FINALES FEBRERO - 1ER LLAMADO </h2>
+            <p>Se publicaron las fechas definitivas para los finales<br>
+                En esta pagina pueden encontrar un link a un drive con material de estudio y resúmenes para las materias y en nuestro canal de Youtube hay prácticas resueltas y clases de apoyo</p>
+            <a href="https://www.instagram.com/p/DUO0teCESOX/" class="btn-action">Ver Cronograma</a>
+        </div>
+    </article>
+
+</main>
+
+    <footer class="main-footer">
+        <p>La Fuente<br><br>Informáticos para la Patria</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
