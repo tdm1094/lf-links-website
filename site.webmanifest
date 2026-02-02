@@ -1,20 +1,26 @@
 {
-  "short_name": "La Fuente",
+  "id": "la-fuente-app",
   "name": "La Fuente - Facultad De Informatica",
+  "short_name": "La Fuente",
+  "description": "App informativa de La Fuente para estudiantes de Informática UNLP",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#002a62",
+  "orientation": "portrait",
+  "scope": "./",
   "icons": [
     {
       "src": "images/logo192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "images/logo512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
-  ],
-  "start_url": "index.html",
-  "display": "standalone",
-  "theme_color": "black",
-  "background_color": "white"
+  ]
 }
