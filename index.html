@@ -6,6 +6,12 @@
     <title>La Fuente - Facultad De Informatica</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="appimages/ios/512.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="appimages/ios/152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="appimages/ios/180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="La Fuente">
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
@@ -76,6 +82,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js')
+        }
+    </script>
 </body>
 
 </html>
