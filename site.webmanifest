@@ -37,19 +37,19 @@
   "screenshots" : [
   {
     "src": "images/screenshots/screenshot1.png",
-    "sizes": "1280x720",
+    "sizes": "1442x3938",
     "type": "image/png",
     "platform": "wide"
   },
     {
     "src": "images/screenshots/screenshot2.png",
-    "sizes": "1280x720",
+    "sizes": "1442x3938",
     "type": "image/png",
     "platform": "wide"
   },
     {
     "src": "images/screenshots/screenshot3.png",
-    "sizes": "1280x720",
+    "sizes": "1442x3938",
     "type": "image/png",
     "platform": "wide"
   }
