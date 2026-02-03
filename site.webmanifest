@@ -34,6 +34,26 @@
       "type": "image/png"
     }
   ],
+  "screenshots" : [
+  {
+    "src": "images/screenshots/screenshot1.png",
+    "sizes": "1280x720",
+    "type": "image/png",
+    "platform": "wide"
+  }
+    {
+    "src": "images/screenshots/screenshot2.png",
+    "sizes": "1280x720",
+    "type": "image/png",
+    "platform": "wide"
+  }
+    {
+    "src": "images/screenshots/screenshot3.png",
+    "sizes": "1280x720",
+    "type": "image/png",
+    "platform": "wide"
+  }
+],
   "theme_color": "#002a62",
   "background_color": "#002a62",
   "display": "fullscreen",
